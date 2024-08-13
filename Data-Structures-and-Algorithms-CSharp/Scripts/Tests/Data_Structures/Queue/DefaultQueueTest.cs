@@ -10,57 +10,57 @@ public static class DefaultQueueTest
         var queue = new DefaultQueue<int>(4);
 
         ConsoleUtility.PrintHyphens();
-        queue.PrintCurrentStack();
+        queue.Print();
         ConsoleUtility.PrintHyphens();
         
         var peekResult = queue.Peek();
         Console.WriteLine($"Peek: {peekResult}");
-        queue.PrintCurrentStack();
+        queue.Print();
         ConsoleUtility.PrintHyphens();
         
         var dequeueResult = queue.Dequeue();
         Console.WriteLine($"Dequeue: {dequeueResult}");
-        queue.PrintCurrentStack();
+        queue.Print();
         ConsoleUtility.PrintHyphens();
         
         queue.Enqueue(1);
         Console.WriteLine($"Enqueue 1");
-        queue.PrintCurrentStack();
+        queue.Print();
         ConsoleUtility.PrintHyphens();
 
         peekResult = queue.Peek();
         Console.WriteLine($"Peek: {peekResult}");
-        queue.PrintCurrentStack();
+        queue.Print();
         ConsoleUtility.PrintHyphens();
         
         queue.Enqueue(2);
         Console.WriteLine($"Enqueue 2");
-        queue.PrintCurrentStack();
+        queue.Print();
         ConsoleUtility.PrintHyphens();
         
         queue.Enqueue(3);
         Console.WriteLine($"Enqueue 3");
-        queue.PrintCurrentStack();
+        queue.Print();
         ConsoleUtility.PrintHyphens();
         
         dequeueResult = queue.Dequeue();
         Console.WriteLine($"Pop: {dequeueResult}");
-        queue.PrintCurrentStack();
+        queue.Print();
         ConsoleUtility.PrintHyphens();
         
         queue.Enqueue(4);
         Console.WriteLine($"Enqueue 4");
-        queue.PrintCurrentStack();
+        queue.Print();
         ConsoleUtility.PrintHyphens();
         
         queue.Enqueue(5);
         Console.WriteLine($"Enqueue 5");
-        queue.PrintCurrentStack();
+        queue.Print();
         ConsoleUtility.PrintHyphens();
         
         queue.Enqueue(6);
         Console.WriteLine($"Enqueue 6");
-        queue.PrintCurrentStack();
+        queue.Print();
         ConsoleUtility.PrintHyphens();
     }
 }

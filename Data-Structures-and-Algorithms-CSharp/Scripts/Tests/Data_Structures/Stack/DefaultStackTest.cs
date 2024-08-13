@@ -10,57 +10,57 @@ public static class DefaultStackTest
         var stack = new DefaultStack<int>(4);
 
         ConsoleUtility.PrintHyphens();
-        stack.PrintCurrentStack();
+        stack.Print();
         ConsoleUtility.PrintHyphens();
         
         var peekResult = stack.Peek();
         Console.WriteLine($"Peek: {peekResult}");
-        stack.PrintCurrentStack();
+        stack.Print();
         ConsoleUtility.PrintHyphens();
         
         var popResult = stack.Pop();
         Console.WriteLine($"Pop: {popResult}");
-        stack.PrintCurrentStack();
+        stack.Print();
         ConsoleUtility.PrintHyphens();
         
         stack.Push(1);
         Console.WriteLine($"Push 1");
-        stack.PrintCurrentStack();
+        stack.Print();
         ConsoleUtility.PrintHyphens();
 
         peekResult = stack.Peek();
         Console.WriteLine($"Peek: {peekResult}");
-        stack.PrintCurrentStack();
+        stack.Print();
         ConsoleUtility.PrintHyphens();
         
         stack.Push(2);
         Console.WriteLine($"Push 2");
-        stack.PrintCurrentStack();
+        stack.Print();
         ConsoleUtility.PrintHyphens();
         
         stack.Push(3);
         Console.WriteLine($"Push 3");
-        stack.PrintCurrentStack();
+        stack.Print();
         ConsoleUtility.PrintHyphens();
         
         popResult = stack.Pop();
         Console.WriteLine($"Pop: {popResult}");
-        stack.PrintCurrentStack();
+        stack.Print();
         ConsoleUtility.PrintHyphens();
         
         stack.Push(4);
         Console.WriteLine($"Push 4");
-        stack.PrintCurrentStack();
+        stack.Print();
         ConsoleUtility.PrintHyphens();
         
         stack.Push(5);
         Console.WriteLine($"Push 5");
-        stack.PrintCurrentStack();
+        stack.Print();
         ConsoleUtility.PrintHyphens();
         
         stack.Push(6);
         Console.WriteLine($"Push 6");
-        stack.PrintCurrentStack();
+        stack.Print();
         ConsoleUtility.PrintHyphens();
     }
 }

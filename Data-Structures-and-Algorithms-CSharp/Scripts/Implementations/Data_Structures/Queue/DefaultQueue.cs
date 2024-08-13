@@ -26,7 +26,7 @@ public class DefaultQueue<T>(int capacity)
     {
         if (IsFull)
         {
-            Console.WriteLine("Queue is not valid for enqueue new objects");
+            Console.WriteLine("Queue is not valid for Enqueue");
             return;
         }
         if (IsEmpty) StartIndexes();
@@ -39,7 +39,7 @@ public class DefaultQueue<T>(int capacity)
     {
         if (IsEmpty)
         {
-            Console.WriteLine("Queue is not valid for dequeue new objects");
+            Console.WriteLine("Queue is not valid for Dequeue");
             return default;
         }
 
@@ -50,7 +50,7 @@ public class DefaultQueue<T>(int capacity)
         return result;
     }
     
-    public void PrintCurrentStack()
+    public void Print()
     {
         Console.Write("Current Queue: ");
         foreach (var item in _array) Console.Write($"{item.ToString()}, ");

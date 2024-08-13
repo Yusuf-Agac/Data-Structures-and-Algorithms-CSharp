@@ -27,10 +27,23 @@ public class DefaultStack<T>(int capacity)
             _array[_topIndex] = item;
             return;
         }
-        Console.WriteLine("Stack is not valid for pushing new objects");
+        Console.WriteLine("Stack is not valid for Push");
     }
     
-    public void PrintCurrentStack()
+    public T? Pop()
+    {
+        if (IsValidForPop())
+        {
+            var result = _array[_topIndex];
+            _array[_topIndex] = default;
+            _topIndex--;
+            return result;
+        }
+        Console.WriteLine("Stack is not valid for Pop");
+        return default;
+    }
+    
+    public void Print()
     {
         Console.Write("Current Stack: ");
         foreach (var item in _array) Console.Write($"{item.ToString()}, ");
@@ -41,19 +54,6 @@ public class DefaultStack<T>(int capacity)
     private bool IsValidForPush()
     {
         return !IsFull;
-    }
-
-    public T? Pop()
-    {
-        if (IsValidForPop())
-        {
-            var result = _array[_topIndex];
-            _array[_topIndex] = default;
-            _topIndex--;
-            return result;
-        }
-        Console.WriteLine("Stack is not valid for poping new objects");
-        return default;
     }
 
     private bool IsValidForPop()
