@@ -2,7 +2,7 @@
 
 namespace Data_Structures_and_Algorithms_CSharp.Scripts.Implementations.Data_Structures.Stack;
 
-public class Stack<T>(int capacity)
+public class DefaultStack<T>(int capacity)
 {
     private readonly T?[] _array = new T?[capacity];
     private int _topIndex = -1;
@@ -12,7 +12,12 @@ public class Stack<T>(int capacity)
 
     public bool IsEmpty => _topIndex <= -1;
     public bool IsFull => _topIndex >= _lastIndex;
-    public T? Peek() => IsEmpty ? default : _array[_topIndex];
+    
+    public T? Peek()
+    {
+        if(IsEmpty) Console.WriteLine("Queue is not valid for Peek");
+        return IsEmpty ? default : _array[_topIndex];
+    }
 
     public void Push(T? item)
     {
@@ -23,6 +28,14 @@ public class Stack<T>(int capacity)
             return;
         }
         Console.WriteLine("Stack is not valid for pushing new objects");
+    }
+    
+    public void PrintCurrentStack()
+    {
+        Console.Write("Current Stack: ");
+        foreach (var item in _array) Console.Write($"{item.ToString()}, ");
+        ConsoleUtility.NextLine();
+        Console.WriteLine($"TopIndex: {_topIndex}");
     }
 
     private bool IsValidForPush()
@@ -46,12 +59,5 @@ public class Stack<T>(int capacity)
     private bool IsValidForPop()
     {
         return !IsEmpty;
-    }
-
-    public void PrintCurrentStack()
-    {
-        Console.Write("Current Stack: ");
-        foreach (var item in _array) Console.Write($"{item.ToString()}, ");
-        ConsoleUtility.NextLine();
     }
 }

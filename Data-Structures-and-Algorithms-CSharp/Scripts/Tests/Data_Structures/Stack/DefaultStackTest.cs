@@ -1,14 +1,25 @@
-﻿using Data_Structures_and_Algorithms_CSharp.Scripts.Utils;
+﻿using Data_Structures_and_Algorithms_CSharp.Scripts.Implementations.Data_Structures.Stack;
+using Data_Structures_and_Algorithms_CSharp.Scripts.Utils;
 
 namespace Data_Structures_and_Algorithms_CSharp.Scripts.Tests.Data_Structures.Stack;
 
-public static class StackTest
+public static class DefaultStackTest
 {
     public static void Test()
     {
-        var stack = new Implementations.Data_Structures.Stack.Stack<int>(4);
+        var stack = new DefaultStack<int>(4);
 
         ConsoleUtility.PrintHyphens();
+        stack.PrintCurrentStack();
+        ConsoleUtility.PrintHyphens();
+        
+        var peekResult = stack.Peek();
+        Console.WriteLine($"Peek: {peekResult}");
+        stack.PrintCurrentStack();
+        ConsoleUtility.PrintHyphens();
+        
+        var popResult = stack.Pop();
+        Console.WriteLine($"Pop: {popResult}");
         stack.PrintCurrentStack();
         ConsoleUtility.PrintHyphens();
         
@@ -17,7 +28,7 @@ public static class StackTest
         stack.PrintCurrentStack();
         ConsoleUtility.PrintHyphens();
 
-        var peekResult = stack.Peek();
+        peekResult = stack.Peek();
         Console.WriteLine($"Peek: {peekResult}");
         stack.PrintCurrentStack();
         ConsoleUtility.PrintHyphens();
@@ -32,7 +43,7 @@ public static class StackTest
         stack.PrintCurrentStack();
         ConsoleUtility.PrintHyphens();
         
-        var popResult = stack.Pop();
+        popResult = stack.Pop();
         Console.WriteLine($"Pop: {popResult}");
         stack.PrintCurrentStack();
         ConsoleUtility.PrintHyphens();
