@@ -6,12 +6,9 @@ public class DefaultStack<T>(int capacity)
 {
     private readonly T?[] _array = new T?[capacity];
     private int _topIndex = -1;
-    
-    private readonly int _capacity = capacity;
-    private readonly int _lastIndex = capacity - 1;
 
     public bool IsEmpty => _topIndex <= -1;
-    public bool IsFull => _topIndex >= _lastIndex;
+    public bool IsFull => _topIndex >= _array.LastIndex();
     
     public T? Peek()
     {

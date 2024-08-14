@@ -5,16 +5,14 @@ namespace Data_Structures_and_Algorithms_CSharp.Scripts.Implementations.Data_Str
 public class DefaultQueue<T>(int capacity)
 {
     private readonly T[] _array = new T[capacity];
-    private readonly int _capacity = capacity;
     
     private int _frontIndex = -1;
     private int _rearIndex = -1;
     
     public bool IsEmpty => _frontIndex <= -1 && _rearIndex <= -1;
-    public bool IsFull => Usage >= _capacity;
+    public bool IsFull => Usage >= capacity;
     
     private int Usage => (_rearIndex - _frontIndex) + 1;
-    private int LastIndex => _array.Length - 1;
     
     public T? Peek()
     {
@@ -70,7 +68,7 @@ public class DefaultQueue<T>(int capacity)
 
     private bool IsShiftNeeded()
     {
-        return _rearIndex >= LastIndex && Usage <= _capacity;
+        return _rearIndex >= _array.LastIndex() && Usage <= capacity;
     }
 
     private void StartIndexes()
