@@ -1,4 +1,5 @@
 ﻿using Data_Structures_and_Algorithms_CSharp.Scripts.Implementations.Data_Structures.Node;
+using Data_Structures_and_Algorithms_CSharp.Scripts.Utils;
 
 namespace Data_Structures_and_Algorithms_CSharp.Scripts.Implementations.Data_Structures.Linked_List;
 
@@ -7,7 +8,7 @@ public class DefaultLinkedList<T>
     private LinearNode<T> _head;
     private bool IsEmpty => _head == null;
 
-    public void InsertAtTheHead(T item)
+    public void InsertToHead(T item)
     {
         if (IsEmpty)
         {
@@ -18,7 +19,7 @@ public class DefaultLinkedList<T>
         _head = newHead;
     }
 
-    public void InsertAtTheTail(T item)
+    public void InsertToTail(T item)
     {
         if (IsEmpty)
         {
@@ -30,7 +31,7 @@ public class DefaultLinkedList<T>
         lastNode.Next = newTail;
     }
 
-    public void DeleteAtTheHead()
+    public void DeleteFromHead()
     {
         if (IsEmpty)
         {
@@ -40,7 +41,7 @@ public class DefaultLinkedList<T>
         _head = _head.Next;
     }
 
-    public void DeleteAtTheTail()
+    public void DeleteFromTail()
     {
         if (IsEmpty)
         {
@@ -90,6 +91,6 @@ public class DefaultLinkedList<T>
             Console.Write($"{currentNode.Item}, ");
             currentNode = currentNode.Next;
         }
-        Console.WriteLine();
+        ConsoleUtility.NextLine();
     }
 }

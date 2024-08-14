@@ -13,32 +13,32 @@ public static class DefaultLinkedListTest
         list.Print();
         ConsoleUtility.PrintHyphens();
         
-        list.InsertAtTheHead(1);
+        list.InsertToHead(1);
         Console.WriteLine($"Insert at Head: 1");
         list.Print();
         ConsoleUtility.PrintHyphens();
 
-        list.InsertAtTheTail(2);
+        list.InsertToTail(2);
         Console.WriteLine($"Insert at Tail: 2");
         list.Print();
         ConsoleUtility.PrintHyphens();
         
-        list.InsertAtTheHead(0);
+        list.InsertToHead(0);
         Console.WriteLine($"Insert at Head: 0");
         list.Print();
         ConsoleUtility.PrintHyphens();
         
-        list.DeleteAtTheHead();
+        list.DeleteFromHead();
         Console.WriteLine($"Delete at Head");
         list.Print();
         ConsoleUtility.PrintHyphens();
         
-        list.DeleteAtTheTail();
+        list.DeleteFromTail();
         Console.WriteLine($"Delete at Tail");
         list.Print();
         ConsoleUtility.PrintHyphens();
         
-        list.InsertAtTheTail(2);
+        list.InsertToTail(2);
         Console.WriteLine($"Insert at Tail: 2");
         list.Print();
         ConsoleUtility.PrintHyphens();

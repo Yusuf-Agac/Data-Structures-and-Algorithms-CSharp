@@ -60,7 +60,7 @@ public class DefaultQueue<T>(int capacity)
     
     private void ShiftArray()
     {
-        for (int i = _frontIndex; i <= _rearIndex; i++)
+        for (var i = _frontIndex; i <= _rearIndex; i++)
         {
             _array[i - 1] = _array[i];
         }
