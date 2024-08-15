@@ -3,11 +3,11 @@ using Data_Structures_and_Algorithms_CSharp.Scripts.Utils;
 
 namespace Data_Structures_and_Algorithms_CSharp.Scripts.Tests.Data_Structures.BinaryTree;
 
-public static class BinarySearchTreeTest
+public static class AVLTreeTest
 {
     public static void Test()
     {
-        var tree = new BinarySearchTree<int>();
+        var tree = new AVLTree<int>();
         
         var expression = (int value) => Console.Write(value + " -> ");
 
@@ -24,13 +24,28 @@ public static class BinarySearchTreeTest
             ConsoleUtility.PrintHyphens();
         }
         
-        tree.Remove(5);
-        Console.WriteLine($"Remove: 5");
+        var isContain = tree.Contains(2);
+        Console.WriteLine($"Contains 2: {isContain}");
         tree.InOrderTraversal(expression);
         ConsoleUtility.PrintHyphens();
         
-        tree.Remove(12);
-        Console.WriteLine($"Remove: 12");
+        tree.Delete(2);
+        Console.WriteLine($"Delete: 2");
+        tree.InOrderTraversal(expression);
+        ConsoleUtility.PrintHyphens();
+        
+        isContain = tree.Contains(2);
+        Console.WriteLine($"Contains 2: {isContain}");
+        tree.InOrderTraversal(expression);
+        ConsoleUtility.PrintHyphens();
+        
+        tree.Delete(3);
+        Console.WriteLine($"Delete: 3");
+        tree.InOrderTraversal(expression);
+        ConsoleUtility.PrintHyphens();
+        
+        tree.Delete(4);
+        Console.WriteLine($"Delete: 4");
         tree.InOrderTraversal(expression);
         ConsoleUtility.PrintHyphens();
     }

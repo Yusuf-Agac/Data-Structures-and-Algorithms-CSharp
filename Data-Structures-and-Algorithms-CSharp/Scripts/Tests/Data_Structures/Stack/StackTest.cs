@@ -1,5 +1,4 @@
-﻿using Data_Structures_and_Algorithms_CSharp.Scripts.Implementations.Data_Structures.Stack;
-using Data_Structures_and_Algorithms_CSharp.Scripts.Utils;
+﻿using Data_Structures_and_Algorithms_CSharp.Scripts.Utils;
 
 namespace Data_Structures_and_Algorithms_CSharp.Scripts.Tests.Data_Structures.Stack;
 

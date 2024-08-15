@@ -16,9 +16,9 @@ public class BinarySearchTree<T> where T : IComparable<T>
         RemoveRecursively(_head, value);
     }
     
-    public void InorderTraversal() 
+    public void InOrderTraversal(Action<T> action) 
     {
-        InorderRecursively(_head);
+        InorderRecursively(_head, action);
         ConsoleUtility.NextLine();
     }
 
@@ -77,11 +77,11 @@ public class BinarySearchTree<T> where T : IComparable<T>
         return currentNode.Item;
     }
     
-    private void InorderRecursively(DoubleNode<T> currentNode)
+    private void InorderRecursively(DoubleNode<T> currentNode, Action<T> action)
     {
         if (currentNode == null) return;
-        InorderRecursively(currentNode.Left);
-        Console.Write(currentNode.Item + " -> ");
-        InorderRecursively(currentNode.Right);
+        InorderRecursively(currentNode.Left, action);
+        action(currentNode.Item);
+        InorderRecursively(currentNode.Right, action);
     }
 }
