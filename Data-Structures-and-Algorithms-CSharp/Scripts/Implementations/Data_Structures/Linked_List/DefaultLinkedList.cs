@@ -5,17 +5,18 @@ namespace Data_Structures_and_Algorithms_CSharp.Scripts.Implementations.Data_Str
 
 public class DefaultLinkedList<T>
 {
-    private LinearNode<T> _head;
+    private SingleNode<T> _head;
     private bool IsEmpty => _head == null;
 
     public void InsertToHead(T item)
     {
         if (IsEmpty)
         {
-            _head = new LinearNode<T>(item);
+            _head = new SingleNode<T>(item);
             return;
         }
-        var newHead = new LinearNode<T>(item, _head);
+        var newHead = new SingleNode<T>(item);
+        newHead.Next = _head;
         _head = newHead;
     }
 
@@ -23,11 +24,11 @@ public class DefaultLinkedList<T>
     {
         if (IsEmpty)
         {
-            _head = new LinearNode<T>(item);
+            _head = new SingleNode<T>(item);
             return;
         }
         var lastNode = GetLastNode();
-        var newTail = new LinearNode<T>(item);
+        var newTail = new SingleNode<T>(item);
         lastNode.Next = newTail;
     }
 
@@ -54,7 +55,7 @@ public class DefaultLinkedList<T>
         currentNode.Next = null;
     }
 
-    public LinearNode<T> SearchNode(T item)
+    public SingleNode<T> SearchNode(T item)
     {
         if (IsEmpty)
         {
@@ -70,7 +71,7 @@ public class DefaultLinkedList<T>
         return null;
     }
 
-    private LinearNode<T> GetLastNode()
+    private SingleNode<T> GetLastNode()
     {
         if (IsEmpty)
         {
