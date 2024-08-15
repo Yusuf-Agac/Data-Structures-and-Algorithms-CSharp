@@ -3,7 +3,7 @@ using Data_Structures_and_Algorithms_CSharp.Scripts.Utils;
 
 namespace Data_Structures_and_Algorithms_CSharp.Scripts.Implementations.Data_Structures.Linked_List;
 
-public class DefaultLinkedList<T>
+public class LinkedList<T>
 {
     private SingleNode<T> _head;
     private bool IsEmpty => _head == null;

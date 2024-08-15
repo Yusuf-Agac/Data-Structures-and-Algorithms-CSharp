@@ -3,11 +3,11 @@ using Data_Structures_and_Algorithms_CSharp.Scripts.Utils;
 
 namespace Data_Structures_and_Algorithms_CSharp.Scripts.Tests.Data_Structures.Linked_List;
 
-public static class DefaultLinkedListTest
+public static class LinkedListTest
 {
     public static void Test()
     {
-        var list = new DefaultLinkedList<int>();
+        var list = new Implementations.Data_Structures.Linked_List.LinkedList<int>();
 
         ConsoleUtility.PrintHyphens();
         list.Print();

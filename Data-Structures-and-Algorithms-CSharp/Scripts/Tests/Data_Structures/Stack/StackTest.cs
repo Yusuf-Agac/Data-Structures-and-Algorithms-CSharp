@@ -3,11 +3,11 @@ using Data_Structures_and_Algorithms_CSharp.Scripts.Utils;
 
 namespace Data_Structures_and_Algorithms_CSharp.Scripts.Tests.Data_Structures.Stack;
 
-public static class DefaultStackTest
+public static class StackTest
 {
     public static void Test()
     {
-        var stack = new DefaultStack<int>(4);
+        var stack = new Implementations.Data_Structures.Stack.Stack<int>(4);
 
         ConsoleUtility.PrintHyphens();
         stack.Print();

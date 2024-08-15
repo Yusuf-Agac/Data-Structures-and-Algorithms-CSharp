@@ -2,7 +2,7 @@
 
 namespace Data_Structures_and_Algorithms_CSharp.Scripts.Implementations.Data_Structures.Stack;
 
-public class DefaultStack<T>(int capacity)
+public class Stack<T>(int capacity)
 {
     private readonly T?[] _array = new T?[capacity];
     private int _topIndex = -1;

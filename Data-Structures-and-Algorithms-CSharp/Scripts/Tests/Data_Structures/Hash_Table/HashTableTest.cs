@@ -3,11 +3,11 @@ using Data_Structures_and_Algorithms_CSharp.Scripts.Utils;
 
 namespace Data_Structures_and_Algorithms_CSharp.Scripts.Tests.Data_Structures.Hash_Table;
 
-public static class DefaultHashTableTest
+public static class HashTableTest
 {
     public static void Test()
     {
-        var hashTable = new DefaultHashTable<int, int>(10);
+        var hashTable = new HashTable<int, int>(10);
         
         ConsoleUtility.PrintHyphens();
         hashTable.Print();

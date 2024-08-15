@@ -2,7 +2,7 @@
 
 namespace Data_Structures_and_Algorithms_CSharp.Scripts.Implementations.Data_Structures.Queue;
 
-public class DefaultQueue<T>(int capacity)
+public class Queue<T>(int capacity)
 {
     private readonly T[] _array = new T[capacity];
     

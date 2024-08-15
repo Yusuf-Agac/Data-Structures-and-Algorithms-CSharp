@@ -3,11 +3,11 @@ using Data_Structures_and_Algorithms_CSharp.Scripts.Utils;
 
 namespace Data_Structures_and_Algorithms_CSharp.Scripts.Tests.Data_Structures.Queue;
 
-public static class DefaultQueueTest
+public static class QueueTest
 {
     public static void Test()
     {
-        var queue = new DefaultQueue<int>(4);
+        var queue = new Implementations.Data_Structures.Queue.Queue<int>(4);
 
         ConsoleUtility.PrintHyphens();
         queue.Print();

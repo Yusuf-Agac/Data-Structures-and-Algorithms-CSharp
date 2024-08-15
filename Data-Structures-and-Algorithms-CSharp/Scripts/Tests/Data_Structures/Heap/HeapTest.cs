@@ -3,11 +3,11 @@ using Data_Structures_and_Algorithms_CSharp.Scripts.Utils;
 
 namespace Data_Structures_and_Algorithms_CSharp.Scripts.Tests.Data_Structures.Heap;
 
-public static class DefaultHeapTest
+public static class HeapTest
 {
     public static void Test()
     {
-        var heap = new DefaultHeap<int>();
+        var heap = new Heap<int>();
 
         ConsoleUtility.PrintHyphens();
         heap.Print();

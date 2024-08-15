@@ -2,12 +2,12 @@
 
 namespace Data_Structures_and_Algorithms_CSharp.Scripts.Implementations.Data_Structures.Hash_Table;
 
-public class DefaultHashTable<TK, TV>
+public class HashTable<TK, TV>
 {
     private readonly LinkedList<KeyValuePair<TK, TV>>[] _buckets;
     private readonly int _initialSize;
 
-    public DefaultHashTable(int initialSize)
+    public HashTable(int initialSize)
     {
         _initialSize = initialSize;
         _buckets = new LinkedList<KeyValuePair<TK, TV>>[_initialSize];

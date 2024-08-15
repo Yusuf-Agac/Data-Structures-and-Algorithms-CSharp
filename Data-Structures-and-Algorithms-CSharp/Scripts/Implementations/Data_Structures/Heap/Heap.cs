@@ -2,7 +2,7 @@
 
 namespace Data_Structures_and_Algorithms_CSharp.Scripts.Implementations.Data_Structures.Heap;
 
-public class DefaultHeap<T> where T : IComparable<T>
+public class Heap<T> where T : IComparable<T>
 {
     private readonly CompleteBinaryTree<T> _tree = new();
 
